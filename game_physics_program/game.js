@@ -100,7 +100,7 @@ let xOffset = 0.0; //distance between middle of drag-point and mouse-click on dr
 let yOffset = 0.0;
 
 /* prepare program */
-function setup() {								
+function setup() {		
   createCanvas(canvasWidth, canvasHeight);
 
   credits = createElement('h2', 'Matthis Ehrhardt, 582239, 20.01.2023');
