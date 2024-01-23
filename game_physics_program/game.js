@@ -112,13 +112,13 @@ function setup() {
   
   //looker was used for testing purposes
   
-  /*
-  lookerX = createElement('h2', 'X: ');
+  
+  lookerX = createElement('vx', 'vx: ');
   lookerX.position(100, 200);
 
   lookerY = createElement('h2', 'Y: ');
   lookerY.position(100, 300);
-
+/*
   lookerZ = createElement('h2', 'Z: ');
   lookerZ.position(100, 400);
   */
@@ -413,10 +413,10 @@ if(moveAir==true){
 
 /* display */
 
-/*
-lookerX.html('ball.greenS: ' + ball.greenS);
-lookerY.html('ball.greenVs: ' + ball.greenVs);
-lookerZ.html('vx: ' +vx);
+
+lookerX.html('ball.greenPosX: ' + ball.greenPosX);
+lookerY.html('ball.diameter: ' + ball.diameter);
+/*lookerZ.html('vx: ' +vx);
 */
 
 //draw the playground
@@ -535,3 +535,9 @@ function windowResized() {						/* responsive design */
   canvasHeight = window.innerHeight;
   resizeCanvas(windowWidth, windowHeight);
 }
+
+function add(a, b) {
+  return a + b;
+}
+
+module.exports = add;
