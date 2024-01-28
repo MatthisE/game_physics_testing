@@ -108,6 +108,7 @@ function setup() {
 
   info = createElement('h2', 'Versuche: ' +tries+ ' davon ' +successes+ ' erfolgreich');
   info.position(50, 90);
+  info.id('info');
 
   
   //looker was used for testing purposes
@@ -138,7 +139,7 @@ function setup() {
   r = 0.5*cW*roh*ball.surface/ball.mass;
 
   //make random wind speed
-  vw= Math.random()*100;
+  vw= Math.random()*25;
 
   if(Math.random() < 0.5){
     vw=-vw;
@@ -327,10 +328,12 @@ function draw() {
   reset_button = createButton('RESET');
   reset_button.position(60, 550);
   reset_button.mousePressed(do_reset);
+  reset_button.id('resetButton');
 
   new_button = createButton('NEW');
   new_button.position(500, 550);
   new_button.mousePressed(do_new);
+  new_button.id('newButton');
 	
 /* calculation */
 M = window.innerWidth/13;
@@ -414,8 +417,8 @@ if(moveAir==true){
 /* display */
 
 
-lookerX.html('ball.greenPosX: ' + ball.greenPosX);
-lookerY.html('ball.diameter: ' + ball.diameter);
+lookerX.html('ball.geenPosX: ' + ball.greenPosX);
+lookerY.html('ball.geenPosY: ' + ball.greenPosY);
 /*lookerZ.html('vx: ' +vx);
 */
 
@@ -535,9 +538,3 @@ function windowResized() {						/* responsive design */
   canvasHeight = window.innerHeight;
   resizeCanvas(windowWidth, windowHeight);
 }
-
-function add(a, b) {
-  return a + b;
-}
-
-module.exports = add;
