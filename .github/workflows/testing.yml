@@ -1,4 +1,4 @@
-name: CI/CD with Jest
+name: CI/CD with Jest and Cypress
 
 on:
   push:
@@ -23,6 +23,14 @@ jobs:
 
       - name: Install Dependencies
         run: npm install
+        working-directory: game_physics_program/
 
       - name: Run Jest Tests
-        run: npm test
+        run: npm run test:unit
+        working-directory: game_physics_program/
+
+      - name: Run Cypress Tests
+        run: npm run test:e2e
+        working-directory: game_physics_program/
+
+        
