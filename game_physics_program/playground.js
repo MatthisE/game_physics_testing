@@ -21,6 +21,10 @@ function drawSlope(beginShape, drawVertex, endShape, radians){
     endShape();
 }
 
+function drawRect2(a,b,c,d,e,f){
+    return;
+}
+
 
 function drawWall(drawRect){
     drawRect(PG.width, PG.wallHeight-PG.height, PG.wallWidth, -PG.wallHeight,'gray', M);//wall
@@ -29,6 +33,7 @@ function drawWall(drawRect){
 
 function drawFlag(drawRect, stroke, drawTriangle, noStroke){
     drawRect(PG.polePosX, PG.poleHeight, PG.poleWidth, -PG.poleHeight, 'black', M);//pole
+    drawRect2(PG.width, PG.wallHeight-PG.height, PG.wallWidth, -PG.wallHeight,'gray', M);
 
     stroke('blue');//flag
     if(vw<0){
@@ -41,41 +46,4 @@ function drawFlag(drawRect, stroke, drawTriangle, noStroke){
     noStroke();
 }
 
-
-function drawCatapult(translate, rotate, radians, fill, rect, ellipse) {
-
-    drawCircle(0, 0, ball.diameter/2,'black', M);//starting point
-
-    //matrix calculations to make ramp rotatable
-	translate(xi0*M, yi0*M); 
-	rotate(-radians(PG.rampDeg));
-
-	fill('gray');
-	rect(0, -PG.rampHeight*M, PG.rampWidth*M, PG.rampHeight*2*M);//ramp ground
-	rect(0, -30, 5, 30);//ramp wall
-
-    if(adjustThrow==true){//feather and boll should just be drawn on catapult if the throw is being adjusted (and ball is not shot yet)
-
-      pull = dragX/Math.cos(radians(PG.rampDeg));//how much ball moves back against feather
-
-      //ball has to stay on catapult
-      if(pull>1){
-        pull =1;
-      }
-      if(pull<0.15){
-        pull =0.15;
-      }
-
-      fill('blue');
-      rect(0, -15, pull*M, 2);//feather
-
-      fill('green');
-	  ellipse(pull*M, -15, ball.diameter*M);//ball
-    }
-
-    //reset matrix calculations
-	rotate(radians(PG.rampDeg));
-	translate(-xi0*M,-yi0*M);
-}
-
-module.exports = {drawGround, drawSlope, drawWall, drawFlag, drawCatapult};
+module.exports = {drawGround, drawSlope, drawWall, drawFlag};

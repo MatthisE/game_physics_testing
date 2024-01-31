@@ -1,4 +1,4 @@
-const {drawGround, drawSlope, drawWall, drawFlag, drawCatapult} = require('./playground');
+const {drawGround, drawSlope, drawWall, drawFlag} = require('./playground');
 
 beforeEach(() => {
     /* declarations */ 
@@ -27,7 +27,7 @@ beforeEach(() => {
     v = v0;
     g = 9.81;
     
-    cR = 0.05;												// Rollreibungskoeff.
+    cR = 0.05;
     n = 50;
     
     // values for friction in the air

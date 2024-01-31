@@ -19,4 +19,6 @@ COPY . .
 EXPOSE 3000
 
 # Start the application
-CMD ["npm", "start"]
+# CMD ["npm", "start"]
+CMD ["npm", "run", "test:unit"]
+# CMD ["npm", "run", "test:e2e"]

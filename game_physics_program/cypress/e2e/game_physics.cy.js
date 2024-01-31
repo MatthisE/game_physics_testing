@@ -1,5 +1,5 @@
 describe('game screen test', () => {
-  it('passes', () => {
+  it('buttons change text correctly', () => {
     cy.visit('index.html')
 
     cy.get('#info').should('have.text', 'Versuche: 0 davon 0 erfolgreich');

@@ -113,13 +113,13 @@ function setup() {
   
   //looker was used for testing purposes
   
-  
+  /*
   lookerX = createElement('vx', 'vx: ');
   lookerX.position(100, 200);
 
   lookerY = createElement('h2', 'Y: ');
   lookerY.position(100, 300);
-/*
+
   lookerZ = createElement('h2', 'Z: ');
   lookerZ.position(100, 400);
   */
@@ -416,10 +416,10 @@ if(moveAir==true){
 
 /* display */
 
-
+/*
 lookerX.html('ball.geenPosX: ' + ball.greenPosX);
 lookerY.html('ball.geenPosY: ' + ball.greenPosY);
-/*lookerZ.html('vx: ' +vx);
+lookerZ.html('vx: ' +vx);
 */
 
 //draw the playground

@@ -1,27 +1,27 @@
 const {moveBallInAir, moveBallOnGround, moveBallOnSlope} = require('./ballMovements');
 
 beforeEach(() => {
-  vx = 6;
-  vy = 6;
-  vw = 0;
+  vx = 6; //horizontal ball speed
+  vy = 6; //vertical ball speed
+  vw = 0; //speed of the air
   
-  r = 0.0004;
-  cR = 0.05;
-  g = 9.81;
+  r = 0.0004; //rolling friction coefficient
+  cR = 0.05; //coefficient of friction
+  g = 9.81; //gravitational force
 
-  sign = 1;
+  sign = 1; //does ball move forwards (1) or backwards (-1)
   M = 115; //scale needed for some operations
 
   pgWidth = 10;
   slopeWidth = 4;
   slopeDeg = 30;
   
-  dt = 0.5/25;
-  t = 0;
+  dt = 0.5/25; //delta time
+  t = 0; //current time
   
-  ballX = 0.8;
-  ballY = 0.6;
-  ballD = 0.2;
+  ballX = 0.8; //x-position of ball
+  ballY = 0.6; //y-position of ball
+  ballD = 0.2; //diameter of ball
 
   ballS = 2; //x-pos of ball on slope
   ballVs = 4; //speed of ball on slope
