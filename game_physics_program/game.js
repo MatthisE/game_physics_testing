@@ -526,7 +526,7 @@ function mouseReleased() { //if drag-point got locked to dragged mouse: put drag
 
     do_start()
   }
-  locked = false; //end lock
+  locked = false; //end lockss
   overDrag = false;
   }
 }
