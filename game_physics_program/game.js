@@ -449,7 +449,6 @@ noStroke();
 drawRotatedRect(0, PG.rampHeight, PG.rampWidth, -PG.rampHeight*2, PG.rampDeg, M, ball.diameter);//ramp
 
 drawCircle(0, 0, ball.diameter/2,'black', M);//starting point
-drawCircle(ball.redPosX, ball.redPosY, ball.diameter,'red', M);//red ball
 
 if(moveSlope!=true && adjustThrow!=true){//moveSlope and adjustThrow draw ball itself
   drawCircle(ball.greenPosX, ball.greenPosY, ball.diameter,'green', M);//green ball

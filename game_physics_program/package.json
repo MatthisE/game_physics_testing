@@ -18,6 +18,6 @@
     "jsdom-global": "^3.0.2"
   },
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.19.2"
   }
 }
